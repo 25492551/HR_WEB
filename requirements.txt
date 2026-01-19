@@ -1,0 +1,16 @@
+# Web Development Tools
+# Development server (optional, Python's http.server is built-in)
+# For better development experience
+
+# Image processing and color extraction
+Pillow>=10.0.0
+
+# Optional: For color palette extraction from images
+scikit-image>=0.21.0
+
+# Optional: For advanced image analysis
+numpy>=1.24.0
+
+# Data analysis and visualization (for service images)
+pandas>=2.0.0
+matplotlib>=3.7.0

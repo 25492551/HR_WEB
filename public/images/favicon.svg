@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!--
+    Recreated from 01_data/Name-card.png (logo mark crop).
+    Note: SVG favicon support varies by browser; favicon.png is also provided as a fallback.
+  -->
+  <image href="favicon.png" x="0" y="0" width="64" height="64" preserveAspectRatio="xMidYMid meet" />
+</svg>
