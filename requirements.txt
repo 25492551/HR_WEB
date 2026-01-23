@@ -1,0 +1,23 @@
+# Web Development Tools
+# Development server (optional, Python's http.server is built-in)
+# For better development experience
+
+# Image processing and color extraction
+Pillow>=10.0.0
+
+# Optional: For color palette extraction from images
+scikit-image>=0.21.0
+
+# Optional: For advanced image analysis
+numpy>=1.24.0
+
+# Data analysis and visualization (for service images)
+pandas>=2.0.0
+matplotlib>=3.7.0
+
+# SVG to PNG conversion (for favicon and SEO images)
+# Option 1: svglib + reportlab (recommended, no system dependencies)
+svglib>=1.5.0
+reportlab>=4.0.0
+# Option 2: cairosvg (requires Cairo system library)
+# cairosvg>=2.7.0
