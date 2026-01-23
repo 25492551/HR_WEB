@@ -141,9 +141,9 @@ This platform integrates OEA, PEA, and SEA as a system, not isolated ingredients
 
 ### Included Research Concepts
 
-- OEA — metabolic and satiety-related signaling during training cycles
-- PEA — inflammation-associated pathways linked to physical comfort
-- SEA — stable saturated NAE supporting baseline lipid signaling
+- OEA — metabolic and satiety-related signaling associated with energy balance
+- PEA — inflammation-associated signaling pathways linked to physical comfort
+- SEA — a saturated, oxidation-stable NAE associated with baseline lipid signaling
 
 > This is not a stimulant stack.  
 > It is a peripheral signaling environment.
@@ -166,7 +166,7 @@ Rather than targeting these pathways directly, we study how physical activity it
 
 - **DHEA (Synaptamide)**
   - Neural signaling related to learning and synaptic plasticity
-  - Cognitive engagement during sustained physical activity
+  - Cognitive engagement in the context of sustained physical activity
 - **AEA (Anandamide)**
   - Endocannabinoid-associated pathways (CB1 / CB2)
   - Exercise-induced motivational and affective states

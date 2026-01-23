@@ -145,7 +145,7 @@ HUMMAN RESEARCH 회사의 공식 웹 홈페이지를 다음 기준으로 제작:
   - 메탈릭 효과 적용
 - [ ] 실제 서비스 이미지 추가 (사용자 제공 필요)
 - [ ] SEO 이미지 생성 (og-image.jpg, twitter-image.jpg)
-- [x] Favicon PNG 생성 (SVG fallback) - Placeholder 생성 완료, 실제 로고 변환 필요
+- [ ] Favicon PNG 생성 (SVG fallback) - Placeholder 생성 완료, 실제 로고 변환 필요
 
 ### Phase 5-1: 움직이는 그래픽 자산 준비 (사용자 직접 제작)
 activetheory.net 스타일의 인터랙티브 효과를 위한 그래픽 자산이 필요합니다.
@@ -247,6 +247,335 @@ activetheory.net 스타일의 인터랙티브 효과를 위한 그래픽 자산�
 - 최적화된 파일 크기 (WebP 변환 권장)
 - 반응형 대응 (다양한 해상도)
 
+#### Adobe Illustrator 제작 가이드
+
+**기본 작업 설정**
+
+**1. 새 문서 생성**
+- **아트보드 크기**: 
+  - 배경/섹션 이미지: `1920px × 1080px` (Full HD 기준)
+  - 파라랙스 레이어: `1920px × 1080px` (각 레이어별)
+  - 인터랙션 그래픽: `512px × 512px` 또는 `1024px × 1024px`
+  - WebGL 텍스처: `512px × 512px` 또는 `1024px × 1024px` (타일링 고려)
+- **색상 모드**: **RGB** (웹용이므로 CMYK 사용 금지)
+- **해상도**: `72 PPI` (웹 표준, 고해상도 디스플레이 대응 시 `144 PPI` 고려)
+- **색상 프로파일**: `sRGB IEC61966-2.1` (웹 표준)
+
+**2. 레이어 구조 권장사항**
+```
+레이어 구조 예시:
+├── [Background] (잠금, 필요시)
+├── [Main Elements] (주요 그래픽 요소)
+├── [Effects] (그라디언트, 그림자, 메탈릭 효과)
+└── [Overlay] (추가 효과, 선택적)
+```
+- 각 레이어에 명확한 이름 지정
+- 그룹화하여 관리 용이하게 구성
+- 필요시 레이어 잠금 활용
+
+**3. 색상 적용 방법**
+- **Swatches 패널**: 명함 색상 팔레트를 Swatches에 등록
+  - Primary Blue: `#1E3A8A` 또는 `#2565B2`
+  - Metallic Silver: `#C0C0C0` 또는 `#B9BBBC`
+  - Light Gray: `#EFEFF1`
+- **Color Picker**: 직접 HEX 코드 입력 (Window > Color)
+- **Gradient Tool**: 메탈릭 효과를 위한 그라디언트 생성
+  - Linear Gradient: 수평/수직 그라디언트
+  - Radial Gradient: 원형 그라디언트 (조명 효과)
+
+**자산 유형별 상세 제작 가이드**
+
+**1. 배경 텍스처/패턴 (Background Textures)**
+
+**아트보드 설정**
+- 크기: `1920px × 1080px` (또는 `3840px × 2160px` for Retina)
+- 색상 모드: RGB
+- 해상도: 72 PPI (또는 144 PPI for Retina)
+
+**제작 방법**
+1. **기하학적 패턴 제작**
+   - Rectangle Tool (M) 또는 Pen Tool (P)로 추상적 형태 생성
+   - Pattern Options (Object > Pattern > Make)로 반복 패턴 생성
+   - 명함 색상 팔레트 적용
+2. **그라디언트 오버레이**
+   - Gradient Tool (G)로 메탈릭 그라디언트 생성
+   - Opacity 조정 (Window > Transparency)
+   - Blend Mode: Overlay, Soft Light, Multiply 등 실험
+3. **텍스처 효과**
+   - Effect > Texture > Grain (선택적)
+   - Effect > Stylize > Inner Glow / Outer Glow (조명 효과)
+   - Effect > Distort & Transform > Roughen (유기적 형태)
+
+**내보내기 설정**
+- **PNG 내보내기**:
+  - File > Export > Export As > PNG
+  - Resolution: `72 PPI` (또는 `144 PPI` for Retina)
+  - Background Color: `Transparent` (투명 배경)
+  - Anti-aliasing: `Type Optimized` 또는 `Art Optimized`
+- **SVG 내보내기** (패턴의 경우):
+  - File > Export > Export As > SVG
+  - Styling: `Internal CSS` (권장) 또는 `Presentation Attributes`
+  - Decimal Places: `1` (파일 크기 최적화)
+  - Responsive: 체크 (반응형 대응)
+
+**권장사항**
+- 미니멀한 패턴 유지 (과도한 디테일 지양)
+- 명함 색상 팔레트 엄격히 준수
+- 그라디언트 조명 효과와 조화되도록 투명도 조정
+- 파일 크기 최적화 (복잡한 패턴은 SVG로, 단순 패턴은 PNG로)
+
+**2. 파라랙스 레이어 (Parallax Layers)**
+
+**아트보드 설정**
+- 크기: `1920px × 1080px` (각 레이어별 동일)
+- 색상 모드: RGB
+- 해상도: 72 PPI
+
+**제작 방법**
+1. **레이어별 깊이감 표현**
+   - **전경 레이어 (parallax-layer-01.png)**: 
+     - 더 선명하고 대비가 강한 요소
+     - 크기: 실제 크기 또는 약간 확대
+     - Opacity: `80-100%`
+   - **중경 레이어 (parallax-layer-02.png)**:
+     - 중간 톤, 중간 크기 요소
+     - Opacity: `60-80%`
+     - Blur 효과 약간 적용 (Effect > Blur > Gaussian Blur: `1-2px`)
+   - **배경 레이어 (parallax-layer-03.png)**:
+     - 가장 부드럽고 흐린 요소
+     - 크기: 약간 축소된 느낌
+     - Opacity: `40-60%`
+     - Blur 효과 강하게 적용 (Effect > Blur > Gaussian Blur: `3-5px`)
+2. **추상적 형태 제작**
+   - Pen Tool (P) 또는 Shape Tools로 유기적 형태 생성
+   - Pathfinder (Window > Pathfinder)로 형태 결합/분리
+   - 각 레이어는 독립적으로 움직일 수 있도록 분리된 요소로 구성
+3. **색상 및 효과**
+   - 명함 색상 팔레트 사용
+   - 그라디언트 적용 (메탈릭 효과)
+   - 투명도 조정으로 깊이감 표현
+
+**내보내기 설정**
+- **PNG 내보내기** (권장):
+  - File > Export > Export As > PNG
+  - Resolution: `72 PPI`
+  - Background Color: `Transparent`
+  - Anti-aliasing: `Art Optimized`
+- **SVG 내보내기** (선택적, 벡터 요소인 경우):
+  - File > Export > Export As > SVG
+  - Styling: `Internal CSS`
+  - Responsive: 체크
+
+**권장사항**
+- 최소 3개 레이어 제작 (전경, 중경, 배경)
+- 각 레이어는 독립적으로 움직일 수 있도록 요소 분리
+- 레이어 간 시각적 계층 구조 명확히 표현
+- 파일명에 레이어 순서 명시 (01, 02, 03)
+
+**3. 마우스 인터랙션 그래픽 (Mouse Interaction Graphics)**
+
+**아트보드 설정**
+- 크기: `512px × 512px` 또는 `1024px × 1024px`
+- 색상 모드: RGB
+- 해상도: 72 PPI
+
+**제작 방법**
+1. **유리 파편 형태 제작**
+   - Pen Tool (P)로 불규칙한 다각형 생성 (유리 조각 형태)
+   - 여러 개의 조각을 개별 객체로 제작 (JavaScript 제어를 위해)
+   - 각 조각은 독립적인 레이어 또는 그룹으로 관리
+2. **투명도 및 반사 효과**
+   - Gradient Tool (G)로 반사 그라디언트 생성
+   - Opacity: `30-70%` (유리 느낌)
+   - Transparency 패널에서 Blend Mode: `Overlay` 또는 `Screen`
+   - Effect > Stylize > Inner Glow (유리 가장자리 효과)
+3. **개별 요소 분리**
+   - 각 조각을 별도의 아트보드 또는 레이어로 분리
+   - 또는 하나의 SVG 파일에 여러 `<g>` 그룹으로 구성
+   - JavaScript에서 개별 제어 가능하도록 ID 또는 클래스 부여
+
+**내보내기 설정**
+- **SVG 내보내기** (권장, 벡터이므로):
+  - File > Export > Export As > SVG
+  - Styling: `Internal CSS` (JavaScript로 스타일 제어 가능)
+  - Decimal Places: `1`
+  - Responsive: 체크
+  - 각 조각을 개별 SVG로 내보내거나, 하나의 SVG에 그룹으로 구성
+- **PNG 내보내기** (비트맵이 필요한 경우):
+  - File > Export > Export As > PNG
+  - Resolution: `72 PPI` 또는 `144 PPI`
+  - Background Color: `Transparent`
+  - Anti-aliasing: `Art Optimized`
+
+**권장사항**
+- SVG 형식 우선 사용 (확장 가능, 실시간 변형 용이)
+- 각 조각을 개별 요소로 제작 (JavaScript 제어 용이)
+- 파일명에 조각 번호 명시 (interaction-shard-01.svg, interaction-shard-02.svg 등)
+- 투명도와 반사 효과로 유리 느낌 강조
+
+**4. WebGL/Shader 텍스처 (선택적)**
+
+**아트보드 설정**
+- 크기: `512px × 512px` 또는 `1024px × 1024px` (타일링 고려)
+- 색상 모드: RGB
+- 해상도: 72 PPI 또는 144 PPI
+
+**제작 방법**
+1. **노이즈 텍스처**
+   - Effect > Texture > Grain (고급 설정)
+   - 또는 Effect > Pixelate > Mezzotint
+   - 명함 색상 팔레트 적용
+   - 타일링 가능하도록 가장자리 매끄럽게 처리
+2. **그라디언트 맵**
+   - Gradient Tool (G)로 명함 색상 기반 그라디언트 생성
+   - Linear 또는 Radial 그라디언트
+   - 타일링 테스트 (Object > Pattern > Make)
+
+**내보내기 설정**
+- **PNG 내보내기**:
+  - File > Export > Export As > PNG
+  - Resolution: `72 PPI` 또는 `144 PPI`
+  - Background Color: `Transparent` 또는 단색 배경
+  - Anti-aliasing: `Art Optimized`
+  - 타일링 가능하도록 정사각형 비율 유지
+
+**권장사항**
+- 타일링 가능한 텍스처 제작 (가장자리 매끄럽게)
+- 명함 색상 팔레트 엄격히 준수
+- 파일 크기 최적화 (WebGL에서 빠른 로딩)
+
+**5. 애니메이션용 스프라이트 시트 (선택적)**
+
+**아트보드 설정**
+- 크기: 프레임 수에 따라 계산
+  - 예: 10개 프레임 × 200px = `2000px × 200px` (가로 배치)
+  - 또는 `200px × 2000px` (세로 배치)
+- 색상 모드: RGB
+- 해상도: 72 PPI
+
+**제작 방법**
+1. **프레임별 아트보드 생성**
+   - Artboard Tool (Shift+O)로 각 프레임용 아트보드 생성
+   - 각 아트보드는 동일한 크기로 설정
+   - 프레임 순서대로 아트보드 배치
+2. **애니메이션 요소 제작**
+   - 각 프레임에서 약간씩 다른 형태/위치로 제작
+   - Timeline 또는 개별 아트보드로 프레임 관리
+3. **스프라이트 시트 조합**
+   - File > Export > Export for Screens 사용
+   - 모든 아트보드를 하나의 이미지로 내보내기
+   - 또는 수동으로 각 프레임을 하나의 캔버스에 배치
+
+**내보내기 설정**
+- **PNG 내보내기**:
+  - File > Export > Export for Screens
+  - Format: `PNG`
+  - Resolution: `72 PPI`
+  - Background Color: `Transparent`
+  - Scale: `1x` (또는 `2x` for Retina)
+  - 모든 아트보드를 하나의 파일로 내보내기
+
+**권장사항**
+- 각 프레임 크기 동일하게 유지
+- 프레임 간 간격 없이 배치 (또는 일정한 간격)
+- 파일명에 프레임 정보 명시 (sprite-animation-10frames.png)
+
+**6. 섹션별 배경 이미지**
+
+**아트보드 설정**
+- 크기: `1920px × 1080px` (Full HD 기준)
+- 색상 모드: RGB
+- 해상도: 72 PPI
+
+**제작 방법**
+1. **미니멀 배경 제작**
+   - Rectangle Tool (M)로 전체 배경 생성
+   - 명함 색상 팔레트 적용
+   - 그라디언트 오버레이 (선택적)
+2. **텍스트 가독성 고려**
+   - 배경과 텍스트 대비 확인
+   - 필요시 반투명 오버레이 레이어 추가
+   - 명함 색상 기반으로 조화로운 배경
+
+**내보내기 설정**
+- **PNG/WebP 내보내기**:
+  - File > Export > Export As > PNG
+  - Resolution: `72 PPI`
+  - Background Color: 단색 배경 (섹션별)
+  - 또는 WebP 형식으로 변환 (외부 도구 사용)
+
+**권장사항**
+- activetheory.net 스타일의 미니멀한 배경
+- 텍스트 가독성 우선 고려
+- 파일 크기 최적화 (WebP 변환 권장)
+
+**메탈릭 효과 제작 팁**
+
+**1. 그라디언트 메탈릭 효과**
+- Gradient Tool (G)로 Linear Gradient 생성
+- 색상 스톱:
+  - `#C0C0C0` (Metallic Silver) → `#FFFFFF` (하이라이트) → `#808080` (그림자)
+- Angle: `45°` 또는 `135°` (메탈릭 반사 느낌)
+- Opacity: `80-100%`
+
+**2. 엠보스/디보스 효과**
+- Effect > Stylize > Inner Glow (엠보스)
+- Effect > Stylize > Outer Glow (디보스)
+- 또는 Effect > 3D > Extrude & Bevel (3D 효과)
+
+**3. 반사 효과**
+- Gradient Tool로 반사 그라디언트 생성
+- Blend Mode: `Overlay` 또는 `Screen`
+- Opacity: `30-50%`
+
+**일반적인 내보내기 워크플로우**
+
+**1. PNG 내보내기 (비트맵)**
+1. File > Export > Export As
+2. Format: `PNG`
+3. Use Artboards: 체크 (여러 아트보드가 있는 경우)
+4. Resolution: `72 PPI` (또는 `144 PPI` for Retina)
+5. Background Color: `Transparent` (투명 배경 필요시)
+6. Anti-aliasing: `Art Optimized` 또는 `Type Optimized`
+
+**2. SVG 내보내기 (벡터)**
+1. File > Export > Export As
+2. Format: `SVG`
+3. Use Artboards: 체크
+4. Styling: `Internal CSS` (권장, JavaScript 제어 용이)
+5. Decimal Places: `1` (파일 크기 최적화)
+6. Responsive: 체크 (반응형 대응)
+7. Image Location: `Embed` (외부 이미지 참조 없이)
+
+**3. Export for Screens (일괄 내보내기)**
+1. File > Export > Export for Screens
+2. Format: `PNG` 또는 `SVG`
+3. Scale: `1x`, `2x` (Retina) 선택
+4. 모든 아트보드 또는 선택된 객체 일괄 내보내기
+
+**파일 최적화 권장사항**
+
+1. **SVG 최적화**
+   - 불필요한 메타데이터 제거
+   - Decimal Places: `1`로 설정 (정밀도 vs 파일 크기 균형)
+   - 그룹화하여 구조 단순화
+2. **PNG 최적화**
+   - 적절한 해상도 사용 (과도한 해상도 지양)
+   - 투명도가 필요 없으면 제거
+   - 외부 도구로 압축 (TinyPNG, ImageOptim 등)
+3. **WebP 변환** (선택적)
+   - PNG 내보내기 후 외부 도구로 WebP 변환
+   - 파일 크기 30-50% 감소 가능
+
+**작업 파일 관리**
+
+- **원본 AI 파일**: `.ai` 형식으로 저장 (편집 가능)
+- **내보내기 파일**: PNG, SVG 등 웹용 형식으로 별도 저장
+- **파일명 규칙**: 
+  - 원본: `bg-texture-hero.ai`
+  - 내보내기: `bg-texture-hero.png`, `bg-texture-hero.svg`
+- **버전 관리**: 필요시 파일명에 버전 번호 추가
+
 #### 파일 구조
 ```
 public/images/
@@ -276,6 +605,7 @@ public/images/
 1. **필수**: 배경 텍스처, 파라랙스 레이어 (최소 2개)
 2. **권장**: 마우스 인터랙션 그래픽
 3. **선택적**: WebGL 텍스처, 스프라이트 시트
+
 
 ### Phase 6: JavaScript 기능 구현
 - [ ] **명함 기반 인터랙션** (1순위)

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!--
-    Recreated from 01_data/Name-card.png (logo mark crop).
-    This SVG intentionally references the raster logo mark to match the business card exactly.
-  -->
-  <image href="logo-mark.png" x="0" y="0" width="200" height="200" preserveAspectRatio="xMidYMid meet" />
-</svg>
