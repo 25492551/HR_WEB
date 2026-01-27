@@ -115,3 +115,18 @@ The project follows a structured directory organization with the following prior
   - Cryptographic keys, hash values, and addresses should ALWAYS specify base (typically hexadecimal)
   - Large numbers that could be ambiguous should always specify base
 - When in doubt, always specify the base explicitly
+
+## Git Version Control
+- The `git/` directory is excluded from version control (see `.gitignore`)
+- When performing git operations:
+  - Always check git status before committing
+  - Use meaningful commit messages that describe the changes
+  - Follow the project's language requirements (English for commit messages)
+  - Include all relevant files in commits (use `git add .` or `git add -A` for all changes)
+  - Push to remote repository after committing changes
+- Git workflow:
+  1. Check status: `git status`
+  2. Stage changes: `git add .` or `git add <specific-files>`
+  3. Commit: `git commit -m "descriptive message"`
+  4. Push: `git push` or `git push origin <branch-name>`
+- The `git/` folder may contain local git configuration or backup files and should not be tracked

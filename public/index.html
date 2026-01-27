@@ -27,7 +27,7 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
-  <link rel="icon" type="image/svg+xml" href="/images/svg.svg">
+  <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +59,7 @@
       <!-- Logo -->
       <div class="nav-logo">
         <a href="/" aria-label="HUMMAN RESEARCH Home">
-          <img src="/svg.svg" alt="HUMMAN RESEARCH Logo" class="logo-img">
+          <img src="/images/logo.svg" alt="HUMMAN RESEARCH Logo" class="logo-img" decoding="async" loading="eager">
           <span class="logo-text">HUMMAN RESEARCH</span>
         </a>
       </div>
@@ -104,7 +104,7 @@
     <section class="start-section" id="start" aria-label="Start logo section">
       <div class="start-content">
         <div class="start-logo">
-          <img src="/images/svg.svg" alt="HUMMAN RESEARCH Logo" class="start-logo-img">
+          <img src="/images/logo.svg" alt="HUMMAN RESEARCH Logo" class="start-logo-img" decoding="async" loading="eager">
         </div>
       </div>
     </section>
@@ -113,7 +113,7 @@
     <section class="hero" id="hero" aria-label="Hero section">
       <div class="hero-background">
         <div class="hero-gradient"></div>
-        <div class="hero-lighting"></div>
+        <div class="hero-lighting" data-parallax="0.12"></div>
       </div>
       <div class="hero-content">
         <h1 class="hero-main-headline">RECODING YOUR VITALITY</h1>
@@ -153,47 +153,47 @@
       <div class="container">
         <div class="cards-grid">
           <!-- CARD 01: NAE Platform (SCIENCE) -->
-          <article class="card" data-tag="SCIENCE">
+          <article class="card" data-tag="SCIENCE" data-tilt data-metallic>
             <div class="card-tag">SCIENCE</div>
             <h3 class="card-title">NAE Platform</h3>
             <p class="card-one-liner">N-acylethanolamide biology, translated into structured performance systems.</p>
             <div class="card-hover-copy">
               <p>The NAE family is involved in lipid-mediated signaling related to appetite, inflammation, and neural activity. Our platform studies how these pathways contribute to routine, consistency, and exercise-driven motivation—not short-term stimulation.</p>
             </div>
-            <a href="#science-detail" class="card-cta btn btn-primary">View Science</a>
+            <a href="#science-detail" class="card-cta btn btn-primary" aria-disabled="true" data-cta>View Science</a>
           </article>
           
           <!-- CARD 02: Peripheral NAE Platform (PLATFORM) -->
-          <article class="card" data-tag="PLATFORM">
+          <article class="card" data-tag="PLATFORM" data-tilt data-metallic>
             <div class="card-tag">PLATFORM</div>
             <h3 class="card-title">Peripheral NAE Platform (OEA / PEA / SEA)</h3>
             <p class="card-one-liner">Peripheral-first lipid signaling for daily training consistency.</p>
             <div class="card-hover-copy">
               <p>This platform focuses on NAEs primarily associated with peripheral signaling, supporting appetite rhythm, physical comfort, and baseline readiness. Designed for stability, repeatability, and long-term routine support.</p>
             </div>
-            <a href="#peripheral-detail" class="card-cta btn btn-primary">Explore Peripheral Platform</a>
+            <a href="#peripheral-detail" class="card-cta btn btn-primary" aria-disabled="true" data-cta>Explore Peripheral Platform</a>
           </article>
           
           <!-- CARD 03: Central NAE Research (R&D) -->
-          <article class="card" data-tag="R&D">
-            <div class="card-tag">R&D</div>
+          <article class="card" data-tag="R&amp;D" data-tilt data-metallic>
+            <div class="card-tag">R&amp;D</div>
             <h3 class="card-title">Central NAE Research (DHEA / AEA)</h3>
             <p class="card-one-liner">Exercise-activated lipid signaling beyond the periphery.</p>
             <div class="card-hover-copy">
               <p>We explore NAEs associated with central nervous system engagement, focusing on motivation, reward, and exercise-associated affect. This work remains research-driven and exploratory.</p>
             </div>
-            <a href="#central-detail" class="card-cta btn btn-primary">Our R&D Principles</a>
+            <a href="#central-detail" class="card-cta btn btn-primary" aria-disabled="true" data-cta>Our R&amp;D Principles</a>
           </article>
           
           <!-- CARD 04: Training Motivation System (EXPERIENCE) -->
-          <article class="card" data-tag="EXPERIENCE">
+          <article class="card" data-tag="EXPERIENCE" data-tilt data-metallic>
             <div class="card-tag">EXPERIENCE</div>
             <h3 class="card-title">Training Motivation System</h3>
             <p class="card-one-liner">Supplementation is only one layer.</p>
             <div class="card-hover-copy">
               <p>We study how ritual, routine, and feedback loops interact with lipid signaling and physical activity, designing systems that support long-term training adherence.</p>
             </div>
-            <a href="#experience-detail" class="card-cta btn btn-primary">See How It Works</a>
+            <a href="#experience-detail" class="card-cta btn btn-primary" aria-disabled="true" data-cta>See How It Works</a>
           </article>
         </div>
       </div>
@@ -287,12 +287,9 @@
       </div>
     </section>
     
-    <!-- End: LOGO + Fixed bottom message -->
-    <section class="end-section" id="end" aria-label="End logo section">
+    <!-- End: Fixed bottom message (no logo) -->
+    <section class="end-section" id="end" aria-label="End message section">
       <div class="container">
-        <div class="end-logo">
-          <img src="/images/svg.svg" alt="HUMMAN RESEARCH Logo" class="end-logo-img">
-        </div>
         <blockquote class="end-message">
           <p>This is not about adding motivation.</p>
           <p>It is about designing systems where movement activates it.</p>
@@ -307,7 +304,7 @@
       <div class="footer-content">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="/images/logo.svg" alt="HUMMAN RESEARCH Logo" class="footer-logo-img">
+            <img src="/images/logo.svg" alt="HUMMAN RESEARCH Logo" class="footer-logo-img" decoding="async" loading="lazy">
           </div>
           <p class="footer-company-name">HUMMAN RESEARCH</p>
         </div>
@@ -344,10 +341,5 @@
   
   <!-- JavaScript -->
   <script src="/js/main.js"></script>
-  
-  <!-- Set current year for copyright -->
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

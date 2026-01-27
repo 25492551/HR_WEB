@@ -7,7 +7,7 @@
   1. **1순위**: Name-card.png (명함 디자인) - 컬러/텍스처 기준
   2. **2순위**: activetheory.net 레이아웃 - 웹페이지 맵/구조 기준
 
-## MAIN 구조 (웹페이지 맵)
+## MAIN 구조 (웹페이지 맵) - Figma 디자인 기준
 1. **Start**: LOGO
 2. **Hero**: Main Headline / Subheadline / Section Title / Tech Tags
 3. **Core Concept**: Exercise Is the Switch + 인용 문구
@@ -17,7 +17,7 @@
    - Science / Peripheral / Central 상세 정보
    - Research Updates 안내
 6. **Values**: Purity & Identity / Stability by Design / Automation Mindset
-7. **End**: LOGO + 하단 고정 메시지
+7. **End**: 하단 고정 메시지 (로고 없음)
 
 ## 콘텐츠 소스 반영 (01_website_contents.md)
 ### 섹션 구성 요약
@@ -47,7 +47,8 @@
    - CTA: See How It Works
 7. **Values & Footer Message**
    - Purity & Identity / Stability by Design / Automation Mindset
-   - 하단 고정 메시지: movement activates motivation
+   - 하단 고정 메시지: "This is not about adding motivation. It is about designing systems where movement activates it."
+   - **참고**: End 섹션에 로고는 포함되지 않음 (Figma 디자인 기준)
 
 ## 명함 디자인 분석
 
@@ -162,17 +163,27 @@
 - **Start**: LOGO
   - 중앙/대형 로고 배치
   - 명함 색상 및 메탈릭 텍스처 반영
+  - Figma 자산: `HUMMAN RESEARCH.svg` 사용
+- **Hero**: 메인 헤드라인 섹션
+  - Figma 자산: `RECODING YOUR VITALITY.svg` (메인 타이틀)
+  - Figma 자산: `THE FUTURE OF ENDOGENOUS LIPID SIGNALING.svg` (섹션 타이틀)
+  - 명함 블루 배경 + 그라디언트 조명 효과
 - **Contents 1**: 정적 정보 카드
   - 카드형 레이아웃
+  - Figma 자산: `SCIENCE.svg`, `PLATFORM.svg`, `R&D.svg`, `EXPERIENCE.svg` (태그)
   - 각 카드 → 단일 영상 링크
   - 명함 색상/텍스처 기반 카드 스타일
 - **Contents 2**: 히스토리 업데이트
   - 단일 링크 진입 구조
   - 내부 상세 콘텐츠 추가 가능
   - activetheory.net 스타일의 미니멀 구성
-- **End**: LOGO
-  - Start와 동일한 브랜딩 톤 유지
-  - 하단 고정 메시지 배치
+- **Values**: 핵심 가치 섹션
+  - Figma 자산의 설명 텍스트 이미지 활용
+  - 카드형 레이아웃
+- **End**: 하단 고정 메시지 (로고 없음)
+  - Figma 디자인 기준: 로고 제외
+  - 메시지만 표시: "This is not about adding motivation. It is about designing systems where movement activates it."
+  - 미니멀한 텍스트 중심 디자인
 
 ### 4단계: 인터랙션 및 애니메이션
 - **명함 기반 효과** (1순위)
@@ -205,8 +216,46 @@
 - CSS 기반 애니메이션 우선 사용
 - 이미지 최적화 및 lazy loading
 
+## Figma 자산 활용 계획
+
+### 이미지 자산 위치
+- 모든 Figma 자산: `public/images/figma/` 폴더
+- 총 91개 파일 (PNG 46개, SVG 45개)
+
+### 주요 자산 활용
+1. **로고/브랜드**
+   - `HUMMAN RESEARCH.svg` - Start 섹션 및 네비게이션
+
+2. **Hero 섹션**
+   - `RECODING YOUR VITALITY.svg` - 메인 헤드라인
+   - `THE FUTURE OF ENDOGENOUS LIPID SIGNALING.svg` - 섹션 타이틀
+
+3. **Contents 1 카드 태그**
+   - `SCIENCE.svg` - CARD 01 태그
+   - `PLATFORM.svg` - CARD 02 태그
+   - `R&D.svg` - CARD 03 태그
+   - `EXPERIENCE.svg` - CARD 04 태그
+
+4. **플랫폼/서비스 이름**
+   - `NAE Platform.svg` - CARD 01 제목
+   - `Peripheral NAE Platform.svg` - CARD 02 제목
+   - `Training Motivation System.svg` - CARD 04 제목
+
+5. **설명 텍스트/카피**
+   - 각 카드의 One-liner 및 Hover copy에 활용
+   - Values 섹션 설명 텍스트에 활용
+
+6. **그래픽 요소**
+   - Vector, Rectangle, Polygon, Ellipse 등 - 배경/장식 요소
+   - Mask group - 특수 효과용
+
+### 자산 사용 원칙
+- **SVG 우선 사용**: 확장 가능하고 파일 크기가 작음
+- **PNG는 선택적**: 투명 배경이 필요한 특수한 경우에만
+- **이미지 최적화**: 웹 사용 전 압축 및 WebP 변환 고려
+
 ## 다음 단계
-1. Name-card.png 기반 색상/텍스처 정리
-2. MAIN 구조에 맞춘 섹션 와이어링
-3. 기본 HTML/CSS 구조 작성
-4. 섹션별 디자인 구현
+1. Figma 자산을 HTML/CSS에 적용
+2. End 섹션에서 로고 제거 (Figma 디자인 기준)
+3. 섹션별 이미지 자산 매핑 및 적용
+4. 이미지 최적화 및 성능 개선
